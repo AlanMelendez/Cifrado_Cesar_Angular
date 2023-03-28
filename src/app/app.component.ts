@@ -19,10 +19,12 @@ export class AppComponent {
     let alfabeto = 'abcdefghijklmnopqrstuvwxyz';
 
     //Rotamos el alfabeto [pocision] lugares a la derecha
+    let cifrado = alfabeto.slice(+pocision);
 
-    let cifrado = alfabeto.slice(-pocision);
 
-    cifrado += alfabeto.slice(0, alfabeto.length - pocision);
+    // cifrado += alfabeto.slice(0, alfabeto.length - pocision);
+    cifrado += alfabeto.slice(0, alfabeto.length + pocision);
+
 
     //Coge la letra del cifrado según la posición de cada letra
 
@@ -52,9 +54,9 @@ export class AppComponent {
 
     let alfabeto = 'abcdefghijklmnopqrstuvwxyz';
 
-    let cifrado = alfabeto.slice(-clave);
+    let cifrado = alfabeto.slice(+clave);
 
-    cifrado += alfabeto.slice(0, alfabeto.length - clave);
+    cifrado += alfabeto.slice(0, alfabeto.length + clave);
 
     for (let i = 0; i < frase.length; i++) {
       letra = frase[i].toLowerCase();
